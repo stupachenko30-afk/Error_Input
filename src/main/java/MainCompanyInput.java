@@ -24,14 +24,14 @@ public class MainCompanyInput {
         BufferedReader br = new BufferedReader(is);
         Employee emp = null;
         try {
-            System.out.println("enter name>>>");
+            System.out.print("enter name>>>");
             String name = br.readLine();
             System.out.print("Enter Id");
             String str = br.readLine();
             int id = Integer.parseInt(str);
             System.out.print("Enter position>>>");
             String position = br.readLine();
-            System.out.println("Enter salary>>>");
+            System.out.print("Enter salary>>>");
             str= br.readLine();
             double salary = Double.parseDouble(str);
             emp = new Employee(name, id, position,salary);
