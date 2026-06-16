@@ -43,3 +43,17 @@ public class MainCompanyInput {
     }
 
 }
+/*
+ ArrayList<Product>
+ Product
+ -------
+ name(String)
+ code(int)
+ price(double)
+
+ input ->
+ ad number products use streams
+ and
+ add to list
+ printList
+ */
