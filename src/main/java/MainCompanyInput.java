@@ -2,13 +2,30 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MainCompanyInput {
     public static void main(String[] args) {
         ArrayList<Employee > company = new ArrayList<>();
+        InputStreamReader is = new InputStreamReader(System.in);
+        BufferedReader scan = new BufferedReader(is);
 
-        Employee emp = getEmployee();
-        company.add(emp);
+        while (true) {
+            Employee emp = getEmployee();
+            company.add(emp);
+
+            System.out.print("another employee ? yes or no>>> ");
+            String answer = null;
+            try {
+                answer = scan.readLine();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+            if(answer.equalsIgnoreCase("no"))
+                break;
+           // scan.close();
+
+        }
 
         printCompany(company);
     }
